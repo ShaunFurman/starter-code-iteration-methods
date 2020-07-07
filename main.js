@@ -31,6 +31,8 @@ const greenEyes2 = users.filter(function (user) {
 })
 printKata(0, greenEyes1)   // If you don't have this function already, see the "Set up" section above.
 
+//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
 //KATA 1- filter()done
 const isActive = users.filter(user => user.isActive === true)
 
@@ -53,13 +55,9 @@ const ageOver38 = users.find(user => user.age > 38)
 printKata(4, ageOver38)
 console.log(ageOver38)
 
-//KATA 5- filter() and find()
-
+//KATA 5- filter() and find()- done
 const age = users.filter(user => user.age > 38)
-
-
 const actives = age.find(user => user.isActive === true)
-
 printKata(5, actives)
 console.log(age, actives)
 
@@ -69,31 +67,15 @@ const zencoBalance = users
     .map(user => user.balance)
 
 printKata(6, zencoBalance)
-console.log("ZENCO's Balance = ", zencoBalance)
+console.log(6, "ZENCO's Balance = ", zencoBalance)
 
-
-
-
-
-
-
-
-
-
-
-//uggggggggggggggggggggggg
-
-//KATA 7- filter, includes, map. 
+//KATA 7- filter, includes, map. -DONE
 // Show the age of every user with the 'Fugiat' tag
-
-
-const tags = users.map(user => user.tags)
-       
-const fug = tags
-    .includes(user => tags, 'fugiat')
-    .filter(user => tags[index])
-// const tags = users.filter(user => users.tags === "fugiat")
-//    printKata(7, tagTarget)
-//    console.log(tagTarget)
-   printKata(7, tags,)
-   console.log(tags,)
+const tags = users
+    .filter(user => user.tags.includes("fugiat"))
+    .map(user => user.age)
+    printKata(7, tags)
+    console.log(7, "Fugiat's tags = ", tags)
+    
+    
+    //Thanks again, Alec!!!!
